@@ -2,6 +2,11 @@
   /* Names of init files (in wwwroot/init), without the .json extension, to load by default */
   "initializationUrls": ["simple"],
   "parameters": {
+    // "serverConfigUrl": "http://172.18.247.14:32754",
+    // "cesiumTerrainAssetId": "8",
+    // "cesiumIonAccessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJiNjg0OWRhMC1jODI3LTQwNDMtOTk5OC02OTY3MWU0NWUxMTkiLCJpZCI6MjA1Njg1LCJpYXQiOjE3MTY3ODg1Nzd9.wpUVYeiXk63H5CUT0QO_vtm2zxXMYGQ5yAOKDTyAw_k",
+    "useCesiumIonTerrain": true,
+    "useCesiumIonBingImagery": true,
     "googleUrlShortenerKey": null,
     "googleAnalyticsKey": null,
     "googleAnalyticsOptions": null,
@@ -18,7 +23,7 @@
             text:"Put your print disclaimer here.",
             url: "#"
         },
-        */
+    */
     // Pop-up disclaimer that will be shown at the start
     // The text of the disclaimer is in lib/Views/GlobalDisclaimer.html
     // globalDisclaimer: {
@@ -37,19 +42,32 @@
             link: "http://www.example.com"
         },*/
     // This is used in various text messages. You should also set <title> in index.html
-    "appName": "Terria Map",
+    "appName": "TwinSpace",
     // See comments in lib/Views/global.scss for further information about customising colors, logos, fonts etc.
     "brandBarElements": [
       "",
-      "<a target=\"_blank\" href=\"https://terria.io\"><img src=\"images/terria_logo.png\" height=\"52\" title=\"Version: {{version}}\" /></a>",
+      "<p style=\"display:flex; letter-spacing:1.5px; align-items:baseline; font-weight:bold; color:#fff;font-size:30px; align-self:center; width:100%; justify-content:center; margin:0;\"><b>T</b><span style=\"font-size:20px; margin:0;\">WIN</span> <b>S</b><span style=\"font-size:20px; margin:0;\">PACE</span></p>",
       ""
     ],
+    "aboutButtonHrefUrl": false,
+    "relatedMaps": null,
+    /* main UI menu setting
+
+      "storyEnabled":false,
+    */
+    "openAddData": [
+      {
+        "caption": "테리아 설명",
+        "href": "http://www.naver.com",
+        "key": "terria description"
+      }
+    ],
     // Shown when things go wrong.
-    "supportEmail": "help@example.com",
+    "supportEmail": "twinspaceMap@gmail.com",
     // You probably shouldn't change this.
     "proj4ServiceBaseUrl": "proj4def/",
     // Or this
-    "feedbackUrl": "feedback",
+    "feedbackUrl": "twinspaceMap@gmail.com",
     // Default mobile viewer mode when loading the map for the first time on mobile platforms.
     // Options are: "3DTerrain", "3DSmooth", "2D"
     "mobileDefaultViewerMode": "2d",
@@ -69,11 +87,11 @@
     // "showInAppGuides": false,
     // see `languageOverrides.json` in languages/en
     "languageConfiguration": {
-      "enabled": false,
+      "enabled": true,
       "debug": false,
       "languages": {
-        "en": "English",
-        "fr": "Français"
+        "ko": "한국어",
+        "en": "English"
       },
       "fallbackLanguage": "en"
     },
